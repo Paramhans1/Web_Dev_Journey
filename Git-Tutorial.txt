@@ -1,0 +1,297 @@
+----------------------------------------------------------------- Working with Git & Github -------------------------------------------------------------------------------
+Install GIT:
+	Check proper installation of GIT
+	In "CMD" run command: 
+		git --version
+
+Create Github account:
+	create a new repository
+
+Open Git Bash:
+	(here we have to update the Github account in which we need perform changes)
+	if it's your personal main Github account
+	run command:
+		git config --global user.name "username of your account"
+		git config --global user.email "email of your account"
+		git config --list"
+			(to check the updation of ur username & email Id)
+				(OR)
+	if Your temporally working with some other Github account
+	run command:
+		git config --local user.name "username of your account"
+		git config --local user.email "email of your account"
+		git config --list"
+			(to check the updation of ur username & email Id)
+
+
+
+WORK-FLOW:
+
+	1.Github Repo
+	2.Clone
+	3.Changes
+	4.Add
+	5.Commit
+	6.Push
+
+
+CLONE:  
+
+	(remote repo --------------------> local repo)
+	Go to Your respective repository project
+	click green colour "<>Code" button 
+	Inside "https" copy the link
+	open VS-Code with the folder where you want to clone your repository Project
+	open terminal
+	run command:
+		git clone project_link
+
+
+
+
+
+STATUS:
+
+	open VS-Code terminal
+	run command:
+		git status
+
+	it shows name of files have been modified or updated and need to be "add" and "commit"
+	1.untracked file - file which is newly created and git doesn't have any previous record of it
+	2.modified file
+	3.staged         - file ready is ready to be committed
+	4.unmodified
+
+
+
+
+ADD:
+
+	open VS-Code terminal
+	if you want to add any particular file
+	run command:
+		git add file_name
+	after adding status of file become as "staged"
+	                   (OR)
+	if you want to add all the files collectively
+	run command:
+		git add .
+	
+
+
+
+COMMIT:
+
+	open VS-Code terminal
+	run command:
+		git commit -m "some commit message"	
+	
+
+
+PUSH:   
+	
+	(local repo ---------------------------> remote repo)
+	open VS-Code terminal
+	run command:
+		git push origin main
+
+
+
+
+NOTE:
+	To view files inside the project in VS-Code:
+		run command: ls
+
+	To view all files inside the project including hidden files in VS-Code:
+		run command: ls -a
+
+
+
+
+
+---------------------------------------if you have created a new project in ur local system and want to push on github-----------------------------------------------------
+INIT COMMAND:
+
+	(used to create new git repo)
+	open VS-Code terminal
+	if new project is created it doesn't have git file inside that, "init" command will create "git file" inside it
+	run command:
+		git init
+
+	now add the project
+	run command:
+		git add .
+
+	then commit the project
+	run command:
+		git commit -m "some commit message"
+
+	to add on remote repository (or) on github
+	run command:
+		git remote add origin project_link
+
+	to verify remote
+	run command:
+		git remote -v
+
+	to check branch
+	run command:
+		git branch
+
+	to rename branch
+	run command:
+		git branch -M main
+
+	to push on github
+	run command:
+		git push origin main
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
+
+GIT BRANCH:
+
+	to check our current branch
+	run command:
+		git branch
+
+	to rename the current branch
+	run command:
+		git branch -M new_branch_name
+
+	to navigate from one branch to another branch
+	run command:
+		git checkout branch_name_you_want_to_navigate_to
+
+	to create new branch
+	run command:
+		git checkout -b new_branch_name
+
+	to delete branch
+	run command:
+		git branch -d branch_name
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+MERGING BRANCHES:
+	
+	way1:
+		to compare commits, branches, files & more
+		run command:
+			git diff branch_name_to_which_you want_to_compare
+		
+		to merge two branches
+		run command:
+			git merge other_branch_name
+
+
+	way2:
+		Create a Pull Request on Github:
+			open GitHub and go to particular project repository
+			click "compare & pull request" button
+			click "create pull request" button
+			then "merge pull request"
+			followed by "confirm merge"
+
+		to pull the project to local system from GitHub(remote)
+		run command:
+			git pull origin main
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Resolving merge conflicts:
+	
+	(An event that takes place when Git is unable to automatically resolve differences in code between two commits.)
+	to merge two branches
+	run command:
+		git merge other_branch_name
+	this will display the conflicting changes, we can slove those in 4 ways
+	1.Accept current change
+	2.Accept incomming change
+	3.Accept both change
+	3.manually fix the changes
+
+	after solving all changes, add the file
+	run command:
+		git add.
+
+	commit the file
+	run command:
+		git commit -m "some_commit_message"
+
+	before trying to merg again check "status" as well as "difference"
+	run command:
+		git status
+		git diff othet_branch_name
+	
+	now navigate to the other branch
+	run command:
+		git checkout visiting_branch_name
+	
+	now again try to merge:
+	run command:
+		git merge branch_name
+	
+	now push the changes to GitHub
+	run command:
+		git push origin main
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Undoing Changes:
+
+	case1: Staged changes
+	to undo the changes of 1 staged file
+	run command:
+		git reset file_name
+	to undo the changes of all staged file
+	run command:
+		git reset
+
+
+
+	case2: Committed changes
+	to undo the changes of 1 commit file
+	run command:
+		git reset HEAD~1
+	to view all previous commit with there respective "hash values"
+	run command:
+		git log
+	to undo the changes of more than one commit file in GitHub
+	run command:
+		git reset hash_value_of_particular_commit
+	to undo the changes of more than one commit file in VS-Code
+	run command:
+		git reset --hard
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+FORK:
+
+	(fork is a new project repo that share same code with same settings in other word it is a rough copy of existing project repo)
+	1.from Your account search the particular project which you want to fork in your account
+	2.inside repo click "fork" button
+	3.check that "Owner:your user_name , Respository: Respository_name"
+	4.then click "create fork"
+
+
+
+
+
+
+
+
+

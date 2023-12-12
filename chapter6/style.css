@@ -1,0 +1,15 @@
+body{
+    background-color: yellowgreen;
+}
+p{
+    border: 2px solid black;
+}
+div{
+    border: 2px solid black;
+}
+span{
+    border: 2px solid black;
+}
+a{
+    border: 2px solid black;
+}

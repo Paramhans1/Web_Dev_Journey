@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images - Tables - Lists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Images:</h2>
+    <img src="mermaind_image.avif" alt="Mermaid">
+    <!-- by some reason if image doesnt display then content of "alt" attribute will be displayed -->
+    <img width="200" height="300" src="mermaind_image.avif" alt="mermaid">
+    <!-- we can adjusted height and width -->
+    <img height="200" src="mermaind_image.avif" alt="mermaid">
+    <img width="200" src="mermaind_image.avif" alt="mermaid">
+    <!-- if we provide any of height or width the other one gets automatically adjusted accordingly -->
+    <!-- Note: always remember to use atleast one of height, width attribute . to prevent CLS(cumulative layout shift) -->
+
+    <br>
+
+    <h2>Tables:</h2>
+    <table>
+        <caption>Employees Data</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Engineer</td>
+                <td>Java</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="2">Param</td>
+                <!-- this will merge 2 rows to display content -->
+                <td colspan="2" >Software Engineer</td>
+                <!-- this will merge two columns to display content-->
+            </tr>
+            <tr>
+                <td>Web Developer</td>
+                <td>CSS</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    <h2>Lists:</h2>
+    <h3>Unordered List:</h3>
+    <h4>disk (Default)</h4>
+    <ul type="disk">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ul>
+    <h4>circle</h4>
+    <ul type="circle">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ul>
+    <h4>square</h4>
+    <ul type="square">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ul>
+
+
+    <h3>Ordered List:</h3>
+    <h4>1 (default)</h4>
+    <ol type="1 (default)">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ol>
+    <h4>A</h4>
+    <ol type="A">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ol>
+    <h4>a</h4>
+    <ol type="a">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ol>
+    <h4>i</h4>
+    <ol type="i">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ol>
+    <h4>I</h4>
+    <ol type="I">
+        <li>Param</li>
+        <li>Shivam</li>
+        <li>Ankit</li>
+    </ol>
+    <script src="script.js"></script>
+</body>
+</html>

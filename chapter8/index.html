@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video - Audio - Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Video:</h2>
+    <h3>controls</h3>
+    <video src="Video_mermaid.mp4" height="400" controls></video>
+    <!-- "controls" is used to add control icons like (play-pause,full-screen,speaker...etc) -->
+    <br>
+    <h3>controls autoplay</h3>
+    <video src="Video_mermaid.mp4" height="400" controls autoplay></video>
+    <!-- "controls autoplay" will play the video as soon as page reload -->
+    <br>
+    <h3>controls loop</h3>
+    <video src="Video_mermaid.mp4" height="400" controls loop></video>
+    <!-- "controls loop" will play the video again repeatedly after completion -->
+    <br>
+    <h3>controls autoplay loop</h3>
+    <video src="Video_mermaid.mp4" height="400" controls autoplay loop></video>
+    <!-- "controls autoplay loop" will play the video as soon as we load page and again repeat it after completion -->
+    <br>
+    <h3>controls muted</h3>
+    <video src="Video_mermaid.mp4" height="400" controls muted></video>
+    <!-- "controls muted" will mute the video -->
+    <br>
+    <h3>controls poster</h3>
+    <video src="Video_mermaid.mp4" height="400" controls poster="mermaind_image.avif"></video>
+    <!-- "controls poster" will add thunbnail to the video-->
+    <br>
+
+
+    <h2>Audio:</h2>
+    <h3>controls</h3>
+    <audio src="audio1.weba" controls></audio>
+    <br>
+    <h3>controls autoplay</h3>
+    <audio src="audio2.weba" controls autoplay></audio>
+    <br>
+    <h3>controls loop</h3>
+    <audio src="audio2.weba" controls loop></audio>
+    <br>
+    <h3>controls autoplay loop</h3>
+    <audio src="audio2.weba" controls autoplay loop></audio>
+    <br>
+    <h3>controls muted</h3>
+    <audio src="audio1.weba" controls muted></audio>
+    <br>
+    <h3>controls preload</h3>
+    <audio src="audio1.weba" controls preload="auto"></audio>
+    <!-- "preload" attribute preload the audio while loading the page itself , it wont wait untill we submit request to play audio -->
+    <br>
+
+
+    <h2>SVG</h2>
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="80" stroke="red" stroke-width="4" fill="violet" />
+    </svg>
+    <img src="img.svg" alt="svg image">
+    <br>
+
+
+    <h2>iFrames</h2>
+    <h3>iFrame of a website</h3>
+    <!-- we can embed one website in our website using "iFrames" -->
+    <iframe src="https://www.codewithharry.com/tutorial/html-home/" height="600" width="400"></iframe>
+    <br>
+    <br>
+    <br>
+    <h3>importing embed iFrames from YouTube video</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=UH-b3QLnwcZZgQQA&amp;start=764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

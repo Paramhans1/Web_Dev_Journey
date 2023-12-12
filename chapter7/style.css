@@ -1,0 +1,20 @@
+body{
+    background-color: yellowgreen;
+}
+/* we refer CLASS by (.calssname) */
+.red{
+    color: red;
+}
+.br-yellow{
+    border: 2px solid black;
+}
+/* we refer ID by (#idname) */
+#firstdiv{
+    background-color: rgb(194, 149, 236);
+}
+#seconddiv{
+    background-color: rgb(12, 239, 247);
+}
+#thirddiv{
+    background-color: rgb(236, 175, 149);
+}

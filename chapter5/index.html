@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Input tags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>form:</h2>
+    <form action="post">
+        <!-- form has two type of action 1.POST & 2.GET -->
+        <div>
+            <!-- "Text" input type -->
+            <label for="username">Enter your username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username">
+            <!-- "placeholder" mean text written inside "textarea" -->
+        </div>
+        <br>
+        <div>
+            <!-- "Email" input type -->
+            <label for="email">Enter your email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <br>
+        <div>
+            <!-- "Password" input type -->
+            <label for="password">Enter your password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            <!-- mandatory attribute has to be marked with "required" -->
+        </div>
+        <br>
+        <div>
+            <!-- "Number" input type -->
+            <label for="number">Enter your age:</label>
+            <input type="number" name="number" id="number" placeholder="Enter your age">
+        </div>
+        <br>
+        <div>
+            <!-- "Date" input type -->
+            <label for="date">Enter your DOB:</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <br>
+        <div>
+            <!-- "Radio" input type -->
+            <label for="">Gender:</label>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Male">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="Female">
+            <!-- since for both input tag "name" attribute is common, only any one of them can be selected-->
+        </div>
+        <br>
+        <div>
+            <!-- "Select" input type -->
+            <label for="profession">Profession:</label>
+            <select name="profession" id="profession">
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Doctor">Doctor</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <!-- "Chackbox" input type -->
+            <label for="checkbox">Above details are correct:</label>
+            <input type="checkbox" name="checkbox" id="checkbox">
+        </div>
+        <br>
+        <div>
+            <!-- "Textarea" input type -->
+            <label for="textarea">Comment:</label>
+            <br>
+            <textarea name="textarea" id="textarea" cols="30" rows="10">Enter your comment here.......</textarea>
+        </div>
+        <br>
+        <div>
+            <!-- "Submit" input type -->
+            <input type="submit" value="submit">
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
